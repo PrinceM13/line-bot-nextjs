@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const body = await request.json();
   console.log("check body ---> ", body);
   if (body.events[0].type === "message") {
-    console.log("check body ---> ", body.events[0].message[0]);
+    console.log("check msg ---> ", body.events[0].message);
   }
   return new Response("Hello, INK13 POST !");
 }
