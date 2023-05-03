@@ -113,38 +113,38 @@ export default async function reply(replyToken: string, msg: string) {
           // ②
           items: [
             {
-              type: "action seefoon", // ③
+              type: "action", // ③
               imageUrl: "https://example.com/sushi.png",
               action: {
                 type: "message",
-                label: "Sushi",
-                text: "Sushi"
+                label: "Sushi Seefoon",
+                text: "Sushi SF"
               }
             },
             {
-              type: "action willie",
+              type: "action",
               imageUrl: "https://example.com/tempura.png",
               action: {
                 type: "message",
-                label: "Tempura",
-                text: "Tempura"
+                label: "Tempura Willie",
+                text: "Tempura WL"
               }
             },
             {
-              type: "action erk", // ④
+              type: "action", // ④
               action: {
                 type: "location",
-                label: "Send location"
+                label: "Send location Erk"
               }
             }
           ]
         }
+      },
+      {
+        type: "richmenuswitch",
+        richMenuAliasId: "richmenu-alias-b",
+        data: "richmenu-changed-to-b"
       }
-      // {
-      //   type: "richmenuswitch",
-      //   richMenuAliasId: "richmenu-alias-b",
-      //   data: "richmenu-changed-to-b"
-      // }
     ]
   };
   await axios.post("https://api.line.me/v2/bot/message/reply", body, config);
