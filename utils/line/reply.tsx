@@ -9,35 +9,35 @@ export default async function reply(replyToken: string, msg: string) {
   const body = {
     replyToken,
     messages: [
-      {
-        type: "text",
-        text: "Hello, user"
-      },
-      {
-        type: "text",
-        text: `Do you need help on ${msg} ?`
-      },
-      {
-        type: "flex",
-        altText: "this is a flex message",
-        contents: {
-          type: "bubble",
-          body: {
-            type: "box",
-            layout: "vertical",
-            contents: [
-              {
-                type: "text",
-                text: "hello"
-              },
-              {
-                type: "text",
-                text: "world"
-              }
-            ]
-          }
-        }
-      },
+      // {
+      //   type: "text",
+      //   text: "Hello, user"
+      // },
+      // {
+      //   type: "text",
+      //   text: `Do you need help on ${msg} ?`
+      // },
+      // {
+      //   type: "flex",
+      //   altText: "this is a flex message",
+      //   contents: {
+      //     type: "bubble",
+      //     body: {
+      //       type: "box",
+      //       layout: "vertical",
+      //       contents: [
+      //         {
+      //           type: "text",
+      //           text: "hello"
+      //         },
+      //         {
+      //           type: "text",
+      //           text: "world"
+      //         }
+      //       ]
+      //     }
+      //   }
+      // },
       {
         type: "template",
         altText: "this is a image carousel template",

@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const replyToken = evnet.replyToken;
   console.log("check msg --> ", evnet.message);
   console.log("check text --> ", evnet.message.text);
-  if (evnet.type === "message" && evnet.message.text === "ink13Help") {
+  if (evnet.type === "message" && evnet.message.text.toLocaleLowerCase() === "ink13help") {
     // console.log("check msg ---> ", body.events[0].message);
     // if (true)
     // if (evnet.message.text === "ink13Help")
