@@ -13,8 +13,10 @@ export async function POST(request: Request) {
   const replyToken = evnet.replyToken;
   if (evnet.type === "message") {
     console.log("check msg ---> ", body.events[0].message);
-    if (evnet.message.text.toLocaleLowerCase() === "ink")
-      await reply(replyToken, evnet.message.text);
+    if (true)
+      // if (evnet.message.text.toLocaleLowerCase() === "ink")
+      console.log("check low --> ", evnet.message.text.toLocaleLowerCase());
+    await reply(replyToken, evnet.message.text);
     console.log("done");
   }
   return new Response("Hello, INK13 POST !");
