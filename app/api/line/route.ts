@@ -14,8 +14,7 @@ export async function POST(request: Request) {
   if (evnet.type === "message") {
     console.log("check msg ---> ", body.events[0].message);
     if (true)
-      // if (evnet.message.text.toLocaleLowerCase() === "ink")
-      console.log("check low --> ", evnet.message.text.toLocaleLowerCase());
+      if (evnet.message.text === "ink13Help") console.log("check low --> ", evnet.message.text);
     await reply(replyToken, evnet.message.text);
     console.log("done");
   }
