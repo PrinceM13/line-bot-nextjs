@@ -139,12 +139,12 @@ export default async function reply(replyToken: string, msg: string) {
             }
           ]
         }
-      },
-      {
-        type: "richmenuswitch",
-        richMenuAliasId: "richmenu-alias-b",
-        data: "richmenu-changed-to-b"
       }
+      // {
+      //   type: "richmenuswitch",
+      //   richMenuAliasId: "richmenu-alias-b",
+      //   data: "richmenu-changed-to-b"
+      // }
     ]
   };
   await axios.post("https://api.line.me/v2/bot/message/reply", body, config);
