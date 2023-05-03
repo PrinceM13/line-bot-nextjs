@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     // if (true)
     // if (evnet.message.text === "ink13Help")
     console.log("check msg --> ", evnet.message);
-    console.log("check text --> ", evnet.message.text);
+    // console.log("check text --> ", evnet.message.text);
     await reply(replyToken, evnet.message.text);
     console.log("done");
   }
